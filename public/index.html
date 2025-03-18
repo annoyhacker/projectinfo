@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teach Students Worldwide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 30px;
+            font-size: larger;
+            color: black;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: black;
+        }
+
+        .box {
+            height: 500px;
+            width: 500px;
+            background-color: white;
+            font-size: 40pt;
+            padding: 30px;
+        }
+
+        .box2 {
+            height: 500px;
+            width: 590px;
+            background-color: white;
+            font-size: 40pt;
+            padding: 30px;
+        }
+
+
+        .underline {
+            display: inline-block;
+            position: relative;
+            line-height: 1.1;
+
+        }
+
+        .underline::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            height: 16px;
+            background-image: url('./img/section1/underline-dash.png');
+            background-size: 100% 16px;
+            background-repeat: no-repeat;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .sign-up {
+            background-color: #EA580C;
+        }
+
+        .view-demo {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            color: blue;
+        }
+
+        .view-demo span {
+            margin-left: 5px;
+        }
+
+        .trusted-companies {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-top: 30px;
+
+        }
+
+        .trusted-companies p {
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .trusted-companies img {
+            width: 30px;
+            height: auto;
+        }
+
+
+        .box3 {
+            height: 200px;
+            width: 600px;
+            background-color: blue;
+            font-size: 40pt;
+            padding: 30px;
+
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            background-image: url('./img/section2/Section Variant 2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 160vh;
+            width: 100%;
+            align-items: center;
+            padding: 1em;
+            color: black;
+        }
+
+        .about-companies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+        .about-companies img {
+            max-width: 50px;
+            height: auto;
+            margin-left: 50px;
+        }
+
+        .bottom-content {
+            margin-top: auto;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            #about {
+                height: auto;
+
+                padding: 20px;
+
+
+
+            }
+
+            .about-companies img {
+                max-width: 50px;
+
+            }
+        }
+
+        @media (max-width: 480px) {
+            #about {
+                padding: 2px;
+                margin-top: 2px;
+
+            }
+
+            .about-companies img {
+                max-width: 30px;
+                margin-left: 10px;
+
+            }
+
+            .about-companies {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-end;
+
+                gap: 2px;
+
+            }
+        }
+
+
+
+
+
+        .custom-bullet li::before {
+            width: 20px;
+            height: 20px;
+            background-image: url('./img/section3/check.png');
+            background-size: contain;
+            margin-right: 8px;
+        }
+
+        .custom-link {
+            text-decoration: none;
+
+            font-size: 20px;
+            display: inline-flex;
+            align-items: center;
+            color: blue;
+        }
+
+        .custom-link img {
+            width: 35px;
+            height: 36px;
+            margin-left: 6px;
+            margin-top: 2px;
+
+
+        }
+
+        cards {
+            display: flex;
+
+            gap: 10px;
+
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            height: 210px;
+            text-align: left;
+        }
+
+        .card span {
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .featured {
+            color: purple;
+        }
+
+        .popular {
+            color: blue;
+        }
+
+        .new {
+            color: green;
+        }
+
+        .card h3 {
+            font-size: 16px;
+
+        }
+
+        .card p {
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./img/nav/Logo-colored.png" alt="Logo" style="height: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" style="font-size: medium;">
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="#">Resource 1</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 2</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Log In</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-dark" href="./signup.html">Sign Up Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section -->
+    <section
+        style="display: flex; min-height: 570px; justify-content: space-around; align-items: center; gap:20px; flex-wrap: wrap;">
+        <div class="box">
+            <div style="display: flex;">
+                <h1 style="font-size:50px; font-weight: bold;"> <span class="underline">
+                        Teach </span> students world wide
+                </h1>
+            </div>
+            <p style="font-size: 18px; padding-top: 20px;">Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend
+                proin
+                massa tincidunt
+                viverra lectus pulvinar.
+                Nunc ipsum est pellentesque turpis ultricies.</p>
+
+            <div class="button-row">
+                <button class="button sign-up">Sign Up Now</button>
+                <button class="button view-demo">
+                    <img src="./img/section1/play-circle.png" alt="Play Icon" width="20" height="20">
+                    <span>View Demo</span>
+                </button>
+            </div>
+            <div class="trusted-companies">
+                <p>Trusted by leading companies</p>
+                <img src="./img/section1/Black and White Collection 1.png" alt="Company 1">
+                <img src="./img/section1/Black and White Collection 11.png" alt="Company 2">
+                <img src="./img/section1/Black and White Collection 2.png" alt="Company 3">
+                <img src="./img/section1/Black and White Collection 20.png" alt="Company 4">
+                <img src="./img/section1/Black and White Collection 3.png" alt="Company 5">
+            </div>
+        </div>
+        <div class="box2">
+            <img src="./img/section1/Hero Image.png" alt="Example Image"
+                style="width: 99%; height: 100%; object-fit: cover;">
+        </div>
+    </section>
+    <section id="about">
+        <h2 style="font-size: 3rem;
+            margin-top: 50px;
+            font-weight: bold;">All the <span class="underline">tool</span> that you need</h2>
+        <p style="padding-top: 20px;">Sit elit feugiat turpis sed integer accumsan turpis. Sed suspendisse nec lorem
+            mauris.</p>
+        <p>Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
+        <div class="bottom-content">
+            <div class="about-companies">
+                <img src="./img/section2/App-thumbnail.png" alt="company 9">
+                <img src="./img/section2/App-thumbnail-2.png" alt="company 1">
+                <img src="./img/section2/App-thumbnail-3.png" alt="company 2">
+                <img src="./img/section2/App-thumbnail-4.png" alt="company 3">
+                <img src="./img/section2/App-thumbnail-5.png" alt="company 4">
+                <img src="./img/section2/App-thumbnail-6.png" alt="company 5">
+                <img src="./img/section2/App-thumbnail-7.png" alt="company 6">
+                <img src="./img/section2/App-thumbnail-8.png" alt="company 7">
+                <img src="./img/section2/App-thumbnail-9.png" alt="company 8">
+            </div>
+        </div>
+
+    </section>
+
+    <section
+        style="display: flex; min-height: 570px; justify-content: space-around; align-items: center; gap:20px; flex-wrap: wrap;">
+        <div class="box">
+            <div style="display: flex; margin-top: 50px;">
+                <h1 style="font-size:50px; font-weight: bold;">An <span class="underline">all-in-one </span> app that
+                    make it easier
+                </h1>
+            </div>
+            <ul class="custom-bullet" style="font-size: large; margin-top: 5%; ">
+                <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
+                <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
+                <li>Ullamcorper ornare in et egestas dolor orci.</li>
+            </ul>
+            <a href="https://example.com" class="custom-link">
+                Find more about the app
+                <img src="./img/section3/arrow-right.png" alt="Arrow">
+            </a>
+
+
+
+        </div>
+
+        </div>
+        <div class="box2">
+            <img src="./img/section3/sec-3-right.png" alt="Example Image"
+                style="width: 90%; height: 80%; object-fit: cover;">
+            <div class="cards">
+                <div class="card">
+                    <span class="featured">Featured</span>
+                    <h3>The map of mathematics</h3>
+                    <p>Egestas et dui scelerisque ut eu purus aliquam vitae habitasse.</p>
+                    <a href="#" class="button">Take Lesson</a>
+                </div>
+            </div>
+    </section>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px 0; margin-top: 20px;">
+        <p>&copy; 2025 kapish rawat infra. All rights reserved.</p>
+        <p><a href="https://www.example.com" style="color: #f1c40f; text-decoration: none;">Privacy Policy</a> | <a
+                href="https://www.example.com" style="color: #f1c40f; text-decoration: none;">Terms of Service</a></p>
+    </footer>
+
+</body>
+
+</html>
