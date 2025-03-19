@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Box</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            /* Remove default body margin */
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .rectangle-box {
+            display: flex;
+            width: 100vw;
+            /* Full viewport width */
+            border: 2px solid #0F172A;
+            background-color: #0F172A;
+        }
+
+        .section {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid #0F172A;
+            box-sizing: border-box;
+        }
+
+        .section:last-child {
+            border-right: none;
+        }
+
+        .section img {
+            max-width: 20%;
+            height: auto;
+            margin-bottom: 2px;
+            /* Reduce space below the image */
+        }
+
+        .section h2 {
+            margin: 10px 0 5px;
+            /* Adjust top and bottom spacing */
+            font-size: 1.5em;
+            color: yellow;
+        }
+
+        .section p {
+            margin: 5px 0;
+            /* Reduce spacing above and below text */
+            font-size: 1em;
+            color: yellow;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .rectangle-box {
+                flex-direction: column;
+                /* Stack sections vertically */
+            }
+
+            .section {
+                border-right: none;
+                /* Remove right border when stacking */
+                border-bottom: 1px solid #ccc;
+                /* Add a bottom border for separation */
+            }
+
+            .section:last-child {
+                border-bottom: none;
+                /* Remove bottom border for the last section */
+            }
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            margin-top: 30px;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            margin-right: 60%;
+            gap: 60px;
+            padding: 10px;
+        }
+
+        .arrows {
+            display: flex;
+            gap: 5px;
+        }
+
+        .arrow img {
+            width: 20px;
+            /* Adjust the size of your images as needed */
+            height: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .heading {
+                font-size: 6vw;
+                /* Slightly smaller font size for smaller screens */
+            }
+
+            .arrow img {
+                width: 8vw;
+                /* Adjust image size for smaller screens */
+            }
+
+            .header-container {
+                flex-direction: column;
+                /* Stack heading and arrows vertically */
+                text-align: center;
+            }
+
+            .heading {
+                margin-bottom: 10px;
+                /* Add space below the heading */
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangle-box">
+        <div class="section">
+            <img src="./img/section5/Icon.png" alt="Image 1">
+            <h2>195</h2>
+            <p>User Countries</p>
+        </div>
+        <div class="section">
+            <img src="./img/section5/Icon2.png" alt="Image 2">
+            <h2>1M</h2>
+            <p>Valued Teacher</p>
+        </div>
+        <div class="section">
+            <img src="./img/section5/Icon3.png" alt="Image 3">
+            <h2>17M</h2>
+            <p>Happy student</p>
+        </div>
+    </div>
+
+    <div class="header-container">
+        <div class="heading">What everyone says</div>
+        <div class="arrows">
+            <div class="arrow"><img src="./img/section5/btn-left-arrow.png" alt="Left Arrow"></div>
+            <div class="arrow"><img src="./img/section5/btn-right-arrow.png" alt="Right Arrow"></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

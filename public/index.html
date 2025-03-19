@@ -27,19 +27,19 @@
     }
 
     .box {
-        height: 500px;
-        width: 500px;
+        height: 400px;
+        width: 400px;
         background-color: white;
         font-size: 40pt;
-        padding: 30px;
+
     }
 
     .box2 {
-        height: 500px;
-        width: 590px;
+        height: 99vh;
+
         background-color: white;
         font-size: 40pt;
-        padding: 30px;
+
     }
 
 
@@ -235,19 +235,21 @@
         background-color: white;
         font-size: 40pt;
         padding: 30px;
+        justify-content: center;
+        align-items: center;
     }
 
     .box4 {
-        flex-direction: row;
+
         height: 400px;
-        width: 600px;
+        width: 490px;
         background-image: url('./img/section3/sec-3-right.png');
         background-size: cover;
         background-position: center;
-        padding: 30px;
+        padding: 20px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
 
@@ -255,7 +257,7 @@
     .card-container {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 10px;
         margin-top: 50%;
 
     }
@@ -274,8 +276,8 @@
     .card .label {
         font-size: 10px;
         font-weight: bold;
-        color: #fff;
-        background-color: #007bff;
+        font-family: robot;
+
         border-radius: 5px;
         padding: 2px 3px;
         display: flex;
@@ -287,9 +289,10 @@
 
     .card h3 {
         margin: 8px 0;
-        font-size: 15px;
+        font-size: 16px;
         color: #333;
         display: flex;
+        font-family: robot;
         justify-content: flex-start;
         font-weight: bold;
     }
@@ -297,6 +300,7 @@
     .card p {
         font-size: 12px;
         color: #666;
+        font-family: robot;
         font-weight: bold;
     }
 
@@ -321,30 +325,26 @@
 
 
     .sec6 {
-        min-height: 800px;
-        margin-top: 50px;
         display: flex;
-        justify-content: space-around;
-        gap: 20px;
-        padding-top: 50px;
-        flex-direction: row;
+        gap: 50px;
         flex-wrap: wrap;
 
     }
 
     .box9 {
         height: 600px;
-        width: 700px;
+        width: 600px;
         background-color: white;
-        font-size: 40pt;
-        padding: 2px, 2px;
+        padding: 5px;
 
     }
 
     .box10 {
-        height: 600px;
-        width: 700px;
+        height: 400px;
+        width: 500px;
         background-color: white;
+        padding: 25px;
+
 
 
 
@@ -359,7 +359,7 @@
     .image-above::before {
         content: "";
         position: absolute;
-        top: -30px;
+        top: -40px;
         left: 0;
         right: 0;
         height: 50px;
@@ -369,102 +369,76 @@
         background-repeat: no-repeat;
     }
 
-    .sec7 {
-        min-height: 800px;
-        margin-top: 50px;
-        border: 8px solid black;
+    .rectangle-box {
         display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-    }
-
-    .box11 {
-        height: 300px;
-        width: 500px;
+        width: 210vh;
+        /* Full viewport width */
+        border: 2px solid #0F172A;
         background-color: #0F172A;
-        font-size: 40pt;
-        padding: 2px, 2px;
-
     }
 
-    .box12 {
-        height: 300px;
-        width: 500px;
-        background-color: #0F172A;
-        font-size: 40pt;
-        padding: 2px, 2px;
-
+    .section {
+        flex: 1;
+        text-align: center;
+        padding: 20px;
+        border-right: 1px solid #0F172A;
+        box-sizing: border-box;
     }
 
-    .box13 {
-        height: 300px;
-        width: 500px;
-        background-color: #0F172A;
-        font-size: 40pt;
-        padding: 2px, 2px;
-
+    .section:last-child {
+        border-right: none;
     }
 
-    .box-container123 {
-        display: flex;
-
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
+    .section img {
+        max-width: 20%;
+        height: auto;
+        margin-bottom: 2px;
+        /* Reduce space below the image */
     }
 
-    .box20 {
-        width: 495px;
-        height: 350px;
-
-        background-color: #0F172A;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+    .section h2 {
+        margin: 10px 0 5px;
+        /* Adjust top and bottom spacing */
+        font-size: 1.5em;
+        color: #FACC15;
     }
 
-    .box20:hover {
-        transform: scale(1.05);
+    .section p {
+        margin: 5px 0;
+        /* Reduce spacing above and below text */
+        font-size: 1em;
+        color: #FACC15;
     }
 
-    .box20 img {
-        width: 80px;
-        height: 80px;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-
-
+    /* Media query for smaller screens */
     @media (max-width: 768px) {
-        .box20-container {
+        .rectangle-box {
             flex-direction: column;
-            align-items: center;
+            /* Stack sections vertically */
         }
 
-        .box20 {
-            width: 80%;
-            margin-bottom: 20px;
+        .section {
+            border-right: none;
+            /* Remove right border when stacking */
+            border-bottom: 1px solid #ccc;
+            /* Add a bottom border for separation */
+        }
 
+        .section:last-child {
+            border-bottom: none;
+            /* Remove bottom border for the last section */
         }
     }
 
     .what {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 50%;
+        margin-left: 20px;
     }
 
     .box22 {
-        height: 100px;
-        width: 380px;
+
         margin-top: 50px;
         font-size: 30pt;
         display: flex;
@@ -472,8 +446,7 @@
     }
 
     .box23 {
-        height: 200px;
-        width: 400px;
+
         margin-top: 50px;
         font-size: 30pt;
         display: flex;
@@ -491,7 +464,6 @@
     .testimonial-container {
         display: flex;
         justify-content: flex-start;
-        gap: 20px;
 
     }
 
@@ -499,13 +471,11 @@
     .testimonial-box {
         width: 350px;
         height: 300px;
-        padding: 20px;
-        margin-top: -45px;
+        padding: 30px;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: #fff;
         font-family: Arial, sans-serif;
-        gap: 20px;
 
 
     }
@@ -545,6 +515,34 @@
     .profile-department {
         font-size: 14px;
         color: bl;
+    }
+
+    .sec7 {
+        display: flex;
+        gap: 10%;
+        flex-wrap: wrap;
+        padding: 25px;
+
+
+    }
+
+    .box31 {
+        padding: 20px;
+        height: 400px;
+        width: 500px;
+        background-color: white;
+        margin-top: 10%;
+
+
+
+    }
+
+    .box32 {
+        height: 500px;
+        width: auto;
+        background-color: white;
+
+
     }
 
     .fixed-bg {
@@ -798,9 +796,8 @@
 
     </section>
 
-    <section
-        style="display: flex; min-height: 570px; justify-content: space-around; align-items: center; gap:20px; flex-wrap: wrap;">
-        <div class="box3">
+    <section style="display: flex; gap: 10%; flex-wrap: wrap;">
+        <div class=" box3">
             <div style="display: flex; margin-top: 50px;">
                 <h1 style="font-size:50px; font-weight: bold;">An <span class="underline">all-in-one </span> app that
                     make it easier
@@ -820,11 +817,11 @@
 
         </div>
 
-        </div>
         <div class="box4">
             <div class="card-container">
                 <div class="card">
-                    <div class="label">Featured</div>
+                    <div class="label" style="color: #6B21A8;
+        background-color: #F3E8FF">Featured</div>
                     <h3>The map of mathematics</h3>
                     <p>Egestas elit dui
                         scelerisque ut eu purus
@@ -832,7 +829,8 @@
                     <button>Take Lesson</button>
                 </div>
                 <div class="card">
-                    <div class="label">Popular</div>
+                    <div class="label" style="color: #1E40AF;
+        background-color: #DBEAFE">Popular</div>
                     <h3>Design for how people think</h3>
                     <p>Aliquam ut euismod
                         condimentum elementum
@@ -840,7 +838,8 @@
                     <button>Take Lesson</button>
                 </div>
                 <div class="card">
-                    <div class="label">New</div>
+                    <div class="label" style="color: #166534;
+        background-color: #DCFCE7">New</div>
                     <h3>International & Commercial low</h3>
                     <p>Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui.</p>
                     <button>Take Lesson</button>
@@ -853,15 +852,15 @@
     <section class="sec6">
         <div class="box9">
             <img src="./img/section4/sec-4-left.png" alt="Example Image"
-                style="width: 99%; height: 100%; object-fit: cover;">
+                style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="box10">
 
             <!-- Logo above "international" -->
-            <h3 style="font-size: 70px; font-weight: bold; margin-top: 80px;">Meet internatio<span
+            <h3 style="font-size: 45px; font-weight: bold; margin-top: 80px;">Meet internatio<span
                     class="image-above">nal</span> student & teacher
             </h3>
-            <p style="font-size: 16pt; padding-top: 30px; align-items: flex-start;">
+            <p style="font-size: 14pt; padding-top: 30px; align-items: flex-start;">
                 Morbi sit
                 egestas dignissim pharetra, sed amet. Tempus
                 justo senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam facilisi facilisi nec magna
@@ -876,108 +875,99 @@
         </div>
 
     </section>
-    <section>
-        <div class="box-container123">
-            <div class="box20">
-                <img src="./img/section5/Icon.png" alt="Icon 1">
-                <div class="box20-text">
-                    <h2 style="font-size:50px ; margin-top: -2.5px; text-align: center; color: #FFD700;">195</h2>
-                    <p style="color: #FFD700;">User Countries</p>
-                </div>
-            </div>
-            <div class="box20">
-                <img src="./img/section5/Icon2.png" alt="Icon 2">
-                <div class="box20-text">
-                    <h2 style="font-size: 50px; text-align: center; margin-top: -2.5px; color: #FFD700;;">1M</h2>
-                    <p style="color: #FFD700;">Valued Teachers</p>
-                </div>
-            </div>
-            <div class="box20">
-                <img src="./img/section5/Icon3.png" alt="Icon 3">
-                <div class="box20-text">
-                    <h2 style="font-size: 50px; text-align: center;  margin-top: -2.5px; color: #FFD700;">17M</h2>
-                    <p style="color: #FFD700;">Happy Students</p>
-                </div>
-            </div>
-        </div>
-        <div class="what">
-            <div class="box22">
-                What Everyone says
-            </div>
-            <div class="box23">
-                <img class="arrow" src="./img/section5/btn-left-arrow.png" alt="Left Arrow">
-                <img class="arrow" src="./img/section5/btn-right-arrow.png" alt="Right Arrow">
-            </div>
-        </div>
-        <div class="testimonial-container">
-            <div class="testimonial-box">
-                <p class="testimonial-text">
-                    Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi
-                    maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing
-                    purus consectetur mi.
-                </p>
-                <div class="profile">
-                    <img src="./img/section5/1st User.png" alt="Profile Picture">
-                    <div class="profile-info">
-                        <p class="profile-name">Hellen Jummy</p>
-                        <p class="profile-department">Financial Counselor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <p class="testimonial-text">
-                    Odio rhoncus ornare ut quam, Molestie vel duis quis scelerisque ut id in tortor turpis viverra
-                    sagittis ultrices nisi, nec tortor. Vestibulum, ultrices ultricies neque, hac ultricies dolor
-                </p>
-                <div class="profile">
-                    <img src="./img/section5/2nd User.png" alt="Profile Picture">
-                    <div class="profile-info">
-                        <p class="profile-name">Ralph Edwards</p>
-                        <p class="profile-department">Math Teacher</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <p class="testimonial-text">
-                    Sagittis nunc egestas leo et malesuada urna risus. Morbi proin et cras aliquam. Diam tellus, amet,
-                    hac imperdiet.Diam tellus, amet,
-                    hac imperdiet. Tellus mi volutpat tellus, congue malesuada sit nisl donec a
-                </p>
-                <div class="profile">
-                    <img src="./img/section5/3rd User.png" alt="Profile Picture">
-                    <div class="profile-info">
-                        <p class="profile-name">Hellena John</p>
-                        <p class="profile-department">Psychology Student</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-box">
-                <p class="testimonial-text">
-                    Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi
-                    maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing
-                    purus consectetur mi.
-                </p>
-                <div class="profile">
-                    <img src="./img/section5/4th User.png" alt="Profile Picture">
-                    <div class="profile-info">
-                        <p class="profile-name">Hellen Jummy</p>
-                        <p class="profile-department">Financial Counselor</p>
-                    </div>
-                </div>
-            </div>
 
+    <div class="rectangle-box">
+        <div class="section">
+            <img src="./img/section5/Icon.png" alt="Image 1">
+            <h2>195</h2>
+            <p>User Countries</p>
         </div>
-    </section>
-
-    <section
-        style="display: flex; min-height: 570px; justify-content: space-around; align-items: center; gap:20px; flex-wrap: wrap;">
-        <div class="box3">
-            <div style="display: flex; margin-top: 50px;">
-                <h1 style="font-size:50px; font-weight: bold;">An <span class="underline">all-in-one </span> app that
-                    make it easier
-                </h1>
+        <div class="section">
+            <img src="./img/section5/Icon2.png" alt="Image 2">
+            <h2>1M</h2>
+            <p>Valued Teacher</p>
+        </div>
+        <div class="section">
+            <img src="./img/section5/Icon3.png" alt="Image 3">
+            <h2>17M</h2>
+            <p>Happy student</p>
+        </div>
+    </div>
+    <div class="what">
+        <div class="box22">
+            What Everyone says
+        </div>
+        <div class="box23">
+            <img class="arrow" src="./img/section5/btn-left-arrow.png" alt="Left Arrow">
+            <img class="arrow" src="./img/section5/btn-right-arrow.png" alt="Right Arrow">
+        </div>
+    </div>
+    <div class="testimonial-container">
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi
+                maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing
+                purus consectetur mi.
+            </p>
+            <div class="profile">
+                <img src="./img/section5/1st User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellen Jummy</p>
+                    <p class="profile-department">Financial Counselor</p>
+                </div>
             </div>
-            <p style="font-size: 15pt;">
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Odio rhoncus ornare ut quam, Molestie vel duis quis scelerisque ut id in tortor turpis viverra
+                sagittis ultrices nisi, nec tortor. Vestibulum, ultrices ultricies neque, hac ultricies dolor
+            </p>
+            <div class="profile">
+                <img src="./img/section5/2nd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Ralph Edwards</p>
+                    <p class="profile-department">Math Teacher</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Sagittis nunc egestas leo et malesuada urna risus. Morbi proin et cras aliquam. Diam tellus, amet,
+                hac imperdiet
+                hac imperdiet. Tellus mi volutpat tellus, congue malesuada sit nisl donec a
+            </p>
+            <div class="profile">
+                <img src="./img/section5/3rd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellena John</p>
+                    <p class="profile-department">Psychology Student</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Sagittis nunc egestas leo et malesuada urna risus. Morbi proin et cras aliquam. Diam tellus, amet,
+                hac imperdiet.
+                hac imperdiet. Tellus mi volutpat tellus, congue malesuada sit nisl donec a
+            </p>
+            <div class="profile">
+                <img src="./img/section5/3rd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellena John</p>
+                    <p class="profile-department">Psychology Student</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="sec7">
+        <div class="box31">
+            <h1 style="font-size:40px; font-weight: bold;">All the cool <span class="underline">features </span>
+            </h1>
+
+            <p style="font-size: 20px; ">
                 Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et dolor eu donec maecenas
                 nulla. Cum sed orci, sit pellentesque quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper
                 non viverra a, neque orci.
@@ -988,9 +978,9 @@
             </a>
 
         </div>
-        <div class="box2">
+        <div class="box32">
             <img src="./img/section6/Section.png" alt="Example Image"
-                style="width: 99%; height: 100%; object-fit: cover;">
+                style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </section>
     <section class="fixed-bg">
