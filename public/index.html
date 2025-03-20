@@ -3,706 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Teach Students Worldwide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
         crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    .navbar-nav .nav-item {
-        margin-right: 30px;
-        font-size: larger;
-        color: black;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: black;
-    }
-
-    .box {
-        height: 400px;
-        width: 400px;
-        background-color: white;
-        font-size: 40pt;
-
-    }
-
-    .box2 {
-        height: 99vh;
-
-        background-color: white;
-        font-size: 40pt;
-
-    }
-
-
-    .underline {
-        display: inline-block;
-        position: relative;
-        line-height: 1.1;
-
-    }
-
-    .underline::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -5px;
-        height: 16px;
-        background-image: url('./img/section1/underline-dash.png');
-        background-size: 100% 16px;
-        background-repeat: no-repeat;
-    }
-
-    .button-row {
-        display: flex;
-        gap: 10px;
-    }
-
-    .button {
-        padding: 10px 20px;
-        font-size: 16px;
-        font-family: Arial, sans-serif;
-        font-weight: bold;
-        text-align: center;
-        border: none;
-        border-radius: 5px;
-        color: white;
-        cursor: pointer;
-    }
-
-    .sign-up {
-        background-color: #EA580C;
-    }
-
-    .view-demo {
-        background-color: white;
-        display: flex;
-        align-items: center;
-        color: blue;
-    }
-
-    .view-demo span {
-        margin-left: 5px;
-    }
-
-    .trusted-companies {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        padding-top: 30px;
-
-    }
-
-    .trusted-companies p {
-        font-size: 15px;
-        font-family: Arial, sans-serif;
-        margin: 0;
-    }
-
-    .trusted-companies img {
-        width: 30px;
-        height: auto;
-    }
-
-
-    .box3 {
-        height: 200px;
-        width: 600px;
-        background-color: blue;
-        font-size: 40pt;
-        padding: 30px;
-
-    }
-
-    #about {
-        display: flex;
-        flex-direction: column;
-        background-image: url('./img/section2/Section Variant 2.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 160vh;
-        width: 100%;
-        align-items: center;
-        padding: 1em;
-        color: black;
-    }
-
-    .about-companies {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-
-        gap: 10px;
-
-    }
-
-    .about-companies img {
-        max-width: 50px;
-        height: auto;
-        margin-left: 50px;
-    }
-
-    .bottom-content {
-        margin-top: auto;
-        margin-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-        #about {
-            height: auto;
-
-            padding: 20px;
-
-
-
-        }
-
-        .about-companies img {
-            max-width: 50px;
-
-        }
-    }
-
-    @media (max-width: 480px) {
-        #about {
-            padding: 2px;
-            margin-top: 2px;
-
-        }
-
-        .about-companies img {
-            max-width: 30px;
-            margin-left: 10px;
-
-        }
-
-        .about-companies {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-end;
-
-            gap: 2px;
-
-        }
-    }
-
-
-
-
-
-    .custom-bullet li::before {
-        width: 20px;
-        height: 20px;
-        background-image: url('./img/section3/check.png');
-        background-size: contain;
-        margin-right: 8px;
-    }
-
-    .custom-link {
-        text-decoration: none;
-
-        font-size: 20px;
-        display: inline-flex;
-        align-items: center;
-        color: blue;
-    }
-
-    .custom-link img {
-        width: 35px;
-        height: 36px;
-        margin-left: 6px;
-        margin-top: 2px;
-
-
-    }
-
-    .box3 {
-
-        height: 500px;
-        width: 500px;
-        background-color: white;
-        font-size: 40pt;
-        padding: 30px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .box4 {
-
-        height: 400px;
-        width: 490px;
-        background-image: url('./img/section3/sec-3-right.png');
-        background-size: cover;
-        background-position: center;
-        padding: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-
-
-    .card-container {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-top: 50%;
-
-    }
-
-    .card {
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 150px;
-        height: 250px;
-        padding: 15px;
-
-    }
-
-
-    .card .label {
-        font-size: 10px;
-        font-weight: bold;
-        font-family: robot;
-
-        border-radius: 5px;
-        padding: 2px 3px;
-        display: flex;
-        width: 60px;
-        margin-bottom: 8px;
-        font-size: 12px;
-
-    }
-
-    .card h3 {
-        margin: 8px 0;
-        font-size: 16px;
-        color: #333;
-        display: flex;
-        font-family: robot;
-        justify-content: flex-start;
-        font-weight: bold;
-    }
-
-    .card p {
-        font-size: 12px;
-        color: #666;
-        font-family: robot;
-        font-weight: bold;
-    }
-
-    .card button {
-        background-color: transparent;
-        color: blue;
-        border: 2px solid blue;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        justify-content: center;
-        font-weight: bold;
-    }
-
-    .card button:hover {
-        background-color: blue;
-        color: white;
-    }
-
-
-
-    .sec6 {
-        display: flex;
-        gap: 50px;
-        flex-wrap: wrap;
-
-    }
-
-    .box9 {
-        height: 600px;
-        width: 600px;
-        background-color: white;
-        padding: 5px;
-
-    }
-
-    .box10 {
-        height: 400px;
-        width: 500px;
-        background-color: white;
-        padding: 25px;
-
-
-
-
-    }
-
-    .image-above {
-        display: inline-block;
-        position: relative;
-        line-height: 1.1;
-    }
-
-    .image-above::before {
-        content: "";
-        position: absolute;
-        top: -40px;
-        left: 0;
-        right: 0;
-        height: 50px;
-        width: 70px;
-        background-image: url('./img/section4/aeroplane.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .rectangle-box {
-        display: flex;
-        width: 210vh;
-        /* Full viewport width */
-        border: 2px solid #0F172A;
-        background-color: #0F172A;
-    }
-
-    .section {
-        flex: 1;
-        text-align: center;
-        padding: 20px;
-        border-right: 1px solid #0F172A;
-        box-sizing: border-box;
-    }
-
-    .section:last-child {
-        border-right: none;
-    }
-
-    .section img {
-        max-width: 20%;
-        height: auto;
-        margin-bottom: 2px;
-        /* Reduce space below the image */
-    }
-
-    .section h2 {
-        margin: 10px 0 5px;
-        /* Adjust top and bottom spacing */
-        font-size: 1.5em;
-        color: #FACC15;
-    }
-
-    .section p {
-        margin: 5px 0;
-        /* Reduce spacing above and below text */
-        font-size: 1em;
-        color: #FACC15;
-    }
-
-    /* Media query for smaller screens */
-    @media (max-width: 768px) {
-        .rectangle-box {
-            flex-direction: column;
-            /* Stack sections vertically */
-        }
-
-        .section {
-            border-right: none;
-            /* Remove right border when stacking */
-            border-bottom: 1px solid #ccc;
-            /* Add a bottom border for separation */
-        }
-
-        .section:last-child {
-            border-bottom: none;
-            /* Remove bottom border for the last section */
-        }
-    }
-
-    .what {
-        display: flex;
-        justify-content: center;
-        gap: 50%;
-        margin-left: 20px;
-    }
-
-    .box22 {
-
-        margin-top: 50px;
-        font-size: 30pt;
-        display: flex;
-        justify-content: center;
-    }
-
-    .box23 {
-
-        margin-top: 50px;
-        font-size: 30pt;
-        display: flex;
-        padding-right: 50px;
-        justify-content: flex-end;
-
-    }
-
-    .arrow {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-    }
-
-    .testimonial-container {
-        display: flex;
-        justify-content: flex-start;
-
-    }
-
-
-    .testimonial-box {
-        width: 350px;
-        height: 300px;
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-        font-family: Arial, sans-serif;
-
-
-    }
-
-    .testimonial-text {
-        margin-bottom: 20px;
-        font-size: 15px;
-        color: black;
-        line-height: 1.6;
-    }
-
-    .profile {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-    }
-
-    .profile img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .profile-info {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .profile-name {
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0;
-    }
-
-    .profile-department {
-        font-size: 14px;
-        color: bl;
-    }
-
-    .sec7 {
-        display: flex;
-        gap: 10%;
-        flex-wrap: wrap;
-        padding: 25px;
-
-
-    }
-
-    .box31 {
-        padding: 20px;
-        height: 400px;
-        width: 500px;
-        background-color: white;
-        margin-top: 10%;
-
-
-
-    }
-
-    .box32 {
-        height: 500px;
-        width: auto;
-        background-color: white;
-
-
-    }
-
-    .fixed-bg {
-        background-image: url('./img/section8/signup-bg.png');
-
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        height: 100vh;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content {
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .signup-btn {
-        background-color: orange;
-        color: white;
-        padding: 15px 40px;
-        margin-top: 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 20px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .signup-btn:hover {
-        background-color: darkorange;
-    }
-
-    footer {
-        background: #0a0f1d;
-        color: white;
-        padding: 30px 0;
-        font-size: 14px;
-    }
-
-    .footer-container {
-        width: 85%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .footer-logo {
-        font-size: 22px;
-        font-weight: bold;
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
-        margin-right: 30px;
-    }
-
-    .footer-logo img {
-        width: 120px;
-
-        padding: 10px;
-
-
-    }
-
-    .footer-column {
-        flex: 1;
-        min-width: 150px;
-        margin-bottom: 20px;
-    }
-
-    .footer-column h3 {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    .footer-column ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-column ul li {
-        margin-bottom: 10px;
-    }
-
-    .footer-column ul li a {
-        text-decoration: none;
-        color: white;
-        opacity: 0.8;
-        transition: 0.3s;
-    }
-
-    .footer-column ul li a:hover {
-        opacity: 1;
-    }
-
-    .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        margin-top: 20px;
-    }
-
-    .footer-bottom p {
-        flex: 1;
-        margin-left: 20px;
-    }
-
-    .footer-bottom-container {
-        display: flex;
-        flex: 1;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 20px;
-        margin-right: 20px;
-    }
-
-    .footer-links {
-        display: flex;
-        gap: 20px;
-    }
-
-    .footer-links a {
-        color: white;
-        text-decoration: none;
-        opacity: 0.8;
-        transition: 0.3s;
-    }
-
-    .footer-links a:hover {
-        opacity: 1;
-    }
-
-    .footer-icons {
-        display: flex;
-        gap: 15px;
-    }
-
-    .footer-icons i {
-        color: white;
-        font-size: 18px;
-        opacity: 0.8;
-        transition: 0.3s;
-    }
-
-    .footer-icons i:hover {
-        opacity: 1;
-    }
-</style>
 
 <body>
-
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
@@ -736,21 +46,14 @@
         </div>
     </nav>
 
-    <!-- Section -->
-    <section
-        style="display: flex; min-height: 570px; justify-content: space-around; align-items: center; gap:20px; flex-wrap: wrap;">
+    <!--SECTION 1----->
+    <section class="section1">
         <div class="box">
-            <div style="display: flex;">
-                <h1 style="font-size:50px; font-weight: bold;"> <span class="underline">
-                        Teach </span> students world wide
-                </h1>
-            </div>
-            <p style="font-size: 20px; padding-top: 20px;">Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend
-                proin
-                massa tincidunt
-                viverra lectus pulvinar.
-                Nunc ipsum est pellentesque turpis ultricies.</p>
-
+            <h1 class="section1-heading"> <span class="underline">
+                    Teach </span> students world wide
+            </h1>
+            <p class="section1-paragraph">Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend
+                proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.</p>
             <div class="button-row">
                 <button class="button sign-up">Sign Up Now</button>
                 <button class="button view-demo">
@@ -769,17 +72,18 @@
         </div>
         <div class="box2">
             <img src="./img/section1/Hero Image.png" alt="Example Image"
-                style="width: 99%; height: 100%; object-fit: cover;">
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         </div>
     </section>
+
+    <!--SECTION 2----->
     <section id="about">
-        <h2 style="font-size: 3rem;
-            margin-top: 50px;
-            font-weight: bold;">All the <span class="underline">tool</span> that you need</h2>
-        <p style="padding-top: 20px; font-size: 20px;">Sit elit feugiat turpis sed integer accumsan turpis. Sed
+        <h2 class="about-heading">All the <span class="underline">tool</span> that you need</h2>
+        <p class="about-paragraph">Sit elit feugiat turpis sed integer accumsan turpis. Sed
             suspendisse nec lorem
             mauris.</p>
-        <p style="font-size: 20px;">Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
+        <p class="about-paragraph">Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
         <div class="bottom-content">
             <div class="about-companies">
                 <img src="./img/section2/App-thumbnail.png" alt="company 9">
@@ -795,14 +99,12 @@
         </div>
 
     </section>
-
-    <section style="display: flex; gap: 10%; flex-wrap: wrap;">
-        <div class=" box3">
-            <div style="display: flex; margin-top: 50px;">
-                <h1 style="font-size:50px; font-weight: bold;">An <span class="underline">all-in-one </span> app that
-                    make it easier
-                </h1>
-            </div>
+    <!--SECTION 3----->
+    <section class="section3">
+        <div class="box6">
+            <h1 class="section3-heading">An <span class="underline">all-in-one </span> app that
+                make it easier
+            </h1>
             <ul class="custom-bullet" style="font-size: large; margin-top: 5%; ">
                 <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
                 <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
@@ -813,15 +115,12 @@
                 <img src="./img/section3/arrow-right.png" alt="Arrow">
             </a>
 
-
-
         </div>
 
-        <div class="box4">
+        <div class="box7">
             <div class="card-container">
                 <div class="card">
-                    <div class="label" style="color: #6B21A8;
-        background-color: #F3E8FF">Featured</div>
+                    <div class="label1">Featured</div>
                     <h3>The map of mathematics</h3>
                     <p>Egestas elit dui
                         scelerisque ut eu purus
@@ -829,17 +128,15 @@
                     <button>Take Lesson</button>
                 </div>
                 <div class="card">
-                    <div class="label" style="color: #1E40AF;
-        background-color: #DBEAFE">Popular</div>
+                    <div class="label2">
+                        Popular</div>
                     <h3>Design for how people think</h3>
                     <p>Aliquam ut euismod
-                        condimentum elementum
-                        ultricies volutpat sit non..</p>
+                        condimentum elementu volutpat sit non..</p>
                     <button>Take Lesson</button>
                 </div>
                 <div class="card">
-                    <div class="label" style="color: #166534;
-        background-color: #DCFCE7">New</div>
+                    <div class="label3">New</div>
                     <h3>International & Commercial low</h3>
                     <p>Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui.</p>
                     <button>Take Lesson</button>
@@ -849,58 +146,59 @@
 
     </section>
 
-    <section class="sec6">
-        <div class="box9">
+    <!--SECTION 4----->
+    <section class="section4">
+        <div class="box8">
             <img src="./img/section4/sec-4-left.png" alt="Example Image"
                 style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-        <div class="box10">
 
-            <!-- Logo above "international" -->
-            <h3 style="font-size: 45px; font-weight: bold; margin-top: 80px;">Meet internatio<span
-                    class="image-above">nal</span> student & teacher
+        </div>
+        <div class="box9">
+            <h3 class="section3-heading">Meet internatio<span class="image-above">nal</span> student & teacher
             </h3>
             <p style="font-size: 14pt; padding-top: 30px; align-items: flex-start;">
                 Morbi sit
                 egestas dignissim pharetra, sed amet. Tempus
                 justo senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam facilisi facilisi nec magna
                 hendrerit. Placerat ipsum sit tellus urna, faucibus aenean lorem faucibus integer.</p>
-            <a href="https://example.com" class="custom-link" style="margin-top: 20px;">
-                Find more about the app
+
+            <a href="https://example.com" class="custom-link">
+                Explore teacher and students
                 <img src="./img/section3/arrow-right.png" alt="Arrow">
             </a>
-
-
 
         </div>
 
     </section>
 
-    <div class="rectangle-box">
-        <div class="section">
+    <!--SECTION 5----->
+
+    <section class="section5">
+        <div class="box10">
             <img src="./img/section5/Icon.png" alt="Image 1">
             <h2>195</h2>
             <p>User Countries</p>
         </div>
-        <div class="section">
-            <img src="./img/section5/Icon2.png" alt="Image 2">
+        <div class="box10"><img src="./img/section5/Icon2.png" alt="Image 2">
             <h2>1M</h2>
             <p>Valued Teacher</p>
         </div>
-        <div class="section">
-            <img src="./img/section5/Icon3.png" alt="Image 3">
+        <div class="box10"> <img src="./img/section5/Icon3.png" alt="Image 3">
             <h2>17M</h2>
             <p>Happy student</p>
         </div>
-    </div>
-    <div class="what">
-        <div class="box22">
-            What Everyone says
+
+    </section>
+
+    <div class="testo-section">
+        <div class="testo-box">
+            <h2 class="testo-title">What Everyone Says</h2>
+            <div class="testo-arrow">
+                <img class="arrow" src="./img/section5/btn-left-arrow.png" alt="Left Arrow">
+                <img class="arrow" src="./img/section5/btn-right-arrow.png" alt="Right Arrow">
+            </div>
         </div>
-        <div class="box23">
-            <img class="arrow" src="./img/section5/btn-left-arrow.png" alt="Left Arrow">
-            <img class="arrow" src="./img/section5/btn-right-arrow.png" alt="Right Arrow">
-        </div>
+
     </div>
     <div class="testimonial-container">
         <div class="testimonial-box">
@@ -961,14 +259,14 @@
         </div>
 
     </div>
-
-    <section class="sec7">
-        <div class="box31">
-            <h1 style="font-size:40px; font-weight: bold;">All the cool <span class="underline">features </span>
+    <!--SECTION 6----->
+    <section class="section6">
+        <div class="box11">
+            <h1 class="section1-heading"> All the cool <span class="underline">features </span>
             </h1>
-
-            <p style="font-size: 20px; ">
-                Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et dolor eu donec maecenas
+            <p class="section1-paragraph">Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et
+                dolor eu
+                donec maecenas
                 nulla. Cum sed orci, sit pellentesque quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper
                 non viverra a, neque orci.
             </p>
@@ -978,26 +276,23 @@
             </a>
 
         </div>
-        <div class="box32">
+        <div class="box12">
             <img src="./img/section6/Section.png" alt="Example Image"
                 style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </section>
-    <section class="fixed-bg">
+
+    <!--SECTION 7----->
+    <section class="section7">
         <div class="content">
-            <h1 style="color: black; font-size: 30pt; font-weight: bold;"> Join world of Learning</h1>
-            <p style="color: black; font-size: 15pt; margin-top: 20px;"> Malesuada ut aliquam at ac est nisi, interdum
-                etiam
-                dignissim.<br>
+            <h1 style="font-weight: bold;">Join a world of learning</h1>
+            <p>Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.<br>
                 Risus elit et fringilla habitant ut facilisi.</p>
-            <button class="signup-btn">
-                Sign Up Now
-            </button>
+            <button> Sign Up Now</button>
         </div>
     </section>
 
-
-
+    <!--footer----->
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -1070,6 +365,31 @@
             </div>
         </div>
     </footer>
+
+
+    <script>
+        const testimonialContainer = document.querySelector('.testimonial-container');
+        const leftArrow = document.querySelector('.arrow[alt="Left Arrow"]');
+        const rightArrow = document.querySelector('.arrow[alt="Right Arrow"]');
+
+        let currentIndex = 0;
+
+        rightArrow.addEventListener('click', () => {
+            const testimonialCount = 4; // Total number of testimonials
+            if (currentIndex < testimonialCount - 1) {
+                currentIndex++;
+                testimonialContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+        leftArrow.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                testimonialContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+    </script>
 
 </body>
 

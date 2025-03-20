@@ -4,159 +4,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rectangle Box</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            /* Remove default body margin */
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .rectangle-box {
-            display: flex;
-            width: 100vw;
-            /* Full viewport width */
-            border: 2px solid #0F172A;
-            background-color: #0F172A;
-        }
-
-        .section {
-            flex: 1;
-            text-align: center;
-            padding: 20px;
-            border-right: 1px solid #0F172A;
-            box-sizing: border-box;
-        }
-
-        .section:last-child {
-            border-right: none;
-        }
-
-        .section img {
-            max-width: 20%;
-            height: auto;
-            margin-bottom: 2px;
-            /* Reduce space below the image */
-        }
-
-        .section h2 {
-            margin: 10px 0 5px;
-            /* Adjust top and bottom spacing */
-            font-size: 1.5em;
-            color: yellow;
-        }
-
-        .section p {
-            margin: 5px 0;
-            /* Reduce spacing above and below text */
-            font-size: 1em;
-            color: yellow;
-        }
-
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .rectangle-box {
-                flex-direction: column;
-                /* Stack sections vertically */
-            }
-
-            .section {
-                border-right: none;
-                /* Remove right border when stacking */
-                border-bottom: 1px solid #ccc;
-                /* Add a bottom border for separation */
-            }
-
-            .section:last-child {
-                border-bottom: none;
-                /* Remove bottom border for the last section */
-            }
-        }
-
-        .header-container {
-            display: flex;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            margin-top: 30px;
-        }
-
-        .heading {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
-            margin-right: 60%;
-            gap: 60px;
-            padding: 10px;
-        }
-
-        .arrows {
-            display: flex;
-            gap: 5px;
-        }
-
-        .arrow img {
-            width: 20px;
-            /* Adjust the size of your images as needed */
-            height: 20px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 600px) {
-            .heading {
-                font-size: 6vw;
-                /* Slightly smaller font size for smaller screens */
-            }
-
-            .arrow img {
-                width: 8vw;
-                /* Adjust image size for smaller screens */
-            }
-
-            .header-container {
-                flex-direction: column;
-                /* Stack heading and arrows vertically */
-                text-align: center;
-            }
-
-            .heading {
-                margin-bottom: 10px;
-                /* Add space below the heading */
-                margin-right: 0;
-            }
-        }
-    </style>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
-    <div class="rectangle-box">
-        <div class="section">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./img/nav/Logo-colored.png" alt="Logo" style="height: 30px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" style="font-size: medium;">
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="#">Resource 1</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 2</a></li>
+                            <li><a class="dropdown-item" href="#">Resource 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Log In</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-dark" href="./signup.html">Sign Up Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--SECTION 1----->
+    <section class="section1">
+        <div class="box">
+            <h1 class="section1-heading"> <span class="underline">
+                    Teach </span> students world wide
+            </h1>
+            <p class="section1-paragraph">Amet nunc diam orci duis ut sit diam arcu, nec. Eleifend
+                proin massa tincidunt viverra lectus pulvinar. Nunc ipsum est pellentesque turpis ultricies.</p>
+            <div class="button-row">
+                <button class="button sign-up">Sign Up Now</button>
+                <button class="button view-demo">
+                    <img src="./img/section1/play-circle.png" alt="Play Icon" width="20" height="20">
+                    <span>View Demo</span>
+                </button>
+            </div>
+            <div class="trusted-companies">
+                <p>Trusted by leading companies</p>
+                <img src="./img/section1/Black and White Collection 1.png" alt="Company 1">
+                <img src="./img/section1/Black and White Collection 11.png" alt="Company 2">
+                <img src="./img/section1/Black and White Collection 2.png" alt="Company 3">
+                <img src="./img/section1/Black and White Collection 20.png" alt="Company 4">
+                <img src="./img/section1/Black and White Collection 3.png" alt="Company 5">
+            </div>
+        </div>
+        <div class="box2">
+            <img src="./img/section1/Hero Image.png" alt="Example Image"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        </div>
+    </section>
+
+    <!--SECTION 2----->
+    <section id="about">
+        <h2 class="about-heading">All the <span class="underline">tool</span> that you need</h2>
+        <p class="about-paragraph">Sit elit feugiat turpis sed integer accumsan turpis. Sed
+            suspendisse nec lorem
+            mauris.</p>
+        <p class="about-paragraph">Pharetra, eu imperdiet ipsum ultrices amet, dui sit suspendisse.</p>
+        <div class="bottom-content">
+            <div class="about-companies">
+                <img src="./img/section2/App-thumbnail.png" alt="company 9">
+                <img src="./img/section2/App-thumbnail-2.png" alt="company 1">
+                <img src="./img/section2/App-thumbnail-3.png" alt="company 2">
+                <img src="./img/section2/App-thumbnail-4.png" alt="company 3">
+                <img src="./img/section2/App-thumbnail-5.png" alt="company 4">
+                <img src="./img/section2/App-thumbnail-6.png" alt="company 5">
+                <img src="./img/section2/App-thumbnail-7.png" alt="company 6">
+                <img src="./img/section2/App-thumbnail-8.png" alt="company 7">
+                <img src="./img/section2/App-thumbnail-9.png" alt="company 8">
+            </div>
+        </div>
+
+    </section>
+    <!--SECTION 3----->
+    <section class="section3">
+        <div class="box6">
+            <h1 class="section3-heading">An <span class="underline">all-in-one </span> app that
+                make it easier
+            </h1>
+            <ul class="custom-bullet" style="font-size: large; margin-top: 5%; ">
+                <li>Est et in pharetra magna adipiscing ornare aliquam.</li>
+                <li>Tellus arcu sed consequat ac velit ut eu blandit.</li>
+                <li>Ullamcorper ornare in et egestas dolor orci.</li>
+            </ul>
+            <a href="https://example.com" class="custom-link">
+                Find more about the app
+                <img src="./img/section3/arrow-right.png" alt="Arrow">
+            </a>
+
+        </div>
+
+        <div class="box7">
+            <div class="card-container">
+                <div class="card">
+                    <div class="label1">Featured</div>
+                    <h3>The map of mathematics</h3>
+                    <p>Egestas elit dui
+                        scelerisque ut eu purus
+                        aliquam vitae habitasse.</p>
+                    <button>Take Lesson</button>
+                </div>
+                <div class="card">
+                    <div class="label2">
+                        Popular</div>
+                    <h3>Design for how people think</h3>
+                    <p>Aliquam ut euismod
+                        condimentum elementum
+                        ultricies volutpat sit non..</p>
+                    <button>Take Lesson</button>
+                </div>
+                <div class="card">
+                    <div class="label3">New</div>
+                    <h3>International & Commercial low</h3>
+                    <p>Molestie integer eu arcu, mauris bibendum rhoncus imperdiet dui.</p>
+                    <button>Take Lesson</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--SECTION 4----->
+    <section class="section4">
+        <div class="box8">
+            <img src="./img/section4/sec-4-left.png" alt="Example Image"
+                style="width: 100%; height: 100%; object-fit: cover;">
+
+        </div>
+        <div class="box9">
+            <h3 class="section3-heading">Meet internatio<span class="image-above">nal</span> student & teacher
+            </h3>
+            <p style="font-size: 14pt; padding-top: 30px; align-items: flex-start;">
+                Morbi sit
+                egestas dignissim pharetra, sed amet. Tempus
+                justo senectus risus ac vel, velit, nunc. Eget commodo eget in aliquam facilisi facilisi nec magna
+                hendrerit. Placerat ipsum sit tellus urna, faucibus aenean lorem faucibus integer.</p>
+
+            <a href="https://example.com" class="custom-link">
+                Explore teacher and students
+                <img src="./img/section3/arrow-right.png" alt="Arrow">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!--SECTION 5----->
+
+    <section class="section5">
+        <div class="box10">
             <img src="./img/section5/Icon.png" alt="Image 1">
             <h2>195</h2>
             <p>User Countries</p>
         </div>
-        <div class="section">
-            <img src="./img/section5/Icon2.png" alt="Image 2">
+        <div class="box10"><img src="./img/section5/Icon2.png" alt="Image 2">
             <h2>1M</h2>
             <p>Valued Teacher</p>
         </div>
-        <div class="section">
-            <img src="./img/section5/Icon3.png" alt="Image 3">
+        <div class="box10"> <img src="./img/section5/Icon3.png" alt="Image 3">
             <h2>17M</h2>
             <p>Happy student</p>
         </div>
-    </div>
 
-    <div class="header-container">
-        <div class="heading">What everyone says</div>
-        <div class="arrows">
-            <div class="arrow"><img src="./img/section5/btn-left-arrow.png" alt="Left Arrow"></div>
-            <div class="arrow"><img src="./img/section5/btn-right-arrow.png" alt="Right Arrow"></div>
+    </section>
+
+    <div class="testo-section">
+        <div class="testo-box">
+            <h2 class="testo-title">What Everyone Says</h2>
+            <div class="testo-arrow">
+                <img class="arrow" src="./img/section5/btn-left-arrow.png" alt="Left Arrow">
+                <img class="arrow" src="./img/section5/btn-right-arrow.png" alt="Right Arrow">
+            </div>
         </div>
-    </div>
 
+    </div>
+    <div class="testimonial-container">
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Lacus vestibulum ultricies mi risus, duis non, volutpat nullam non. Magna congue nisi
+                maecenas elit aliquet eu sed consectetur. Vitae quis cras vitae praesent morbi adipiscing
+                purus consectetur mi.
+            </p>
+            <div class="profile">
+                <img src="./img/section5/1st User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellen Jummy</p>
+                    <p class="profile-department">Financial Counselor</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Odio rhoncus ornare ut quam, Molestie vel duis quis scelerisque ut id in tortor turpis viverra
+                sagittis ultrices nisi, nec tortor. Vestibulum, ultrices ultricies neque, hac ultricies dolor
+            </p>
+            <div class="profile">
+                <img src="./img/section5/2nd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Ralph Edwards</p>
+                    <p class="profile-department">Math Teacher</p>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Sagittis nunc egestas leo et malesuada urna risus. Morbi proin et cras aliquam. Diam tellus, amet,
+                hac imperdiet
+                hac imperdiet. Tellus mi volutpat tellus, congue malesuada sit nisl donec a
+            </p>
+            <div class="profile">
+                <img src="./img/section5/3rd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellena John</p>
+                    <p class="profile-department">Psychology Student</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-box">
+            <p class="testimonial-text">
+                Sagittis nunc egestas leo et malesuada urna risus. Morbi proin et cras aliquam. Diam tellus, amet,
+                hac imperdiet.
+                hac imperdiet. Tellus mi volutpat tellus, congue malesuada sit nisl donec a
+            </p>
+            <div class="profile">
+                <img src="./img/section5/3rd User.png" alt="Profile Picture">
+                <div class="profile-info">
+                    <p class="profile-name">Hellena John</p>
+                    <p class="profile-department">Psychology Student</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--SECTION 6----->
+    <section class="section6">
+        <div class="box11">
+            <h1 class="section1-heading"> All the cool <span class="underline">features </span>
+            </h1>
+            <p class="section1-paragraph">Mauris consequat, cursus pharetra et, habitasse rhoncus quis odio ac. In et
+                dolor eu
+                donec maecenas
+                nulla. Cum sed orci, sit pellentesque quisque feugiat cras ullamcorper. Ultrices in amet, ullamcorper
+                non viverra a, neque orci.
+            </p>
+            <a href="https://example.com" class="custom-link">
+                Find more about the app
+                <img src="./img/section3/arrow-right.png" alt="Arrow">
+            </a>
+
+        </div>
+        <div class="box12">
+            <img src="./img/section6/Section.png" alt="Example Image"
+                style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </section>
+
+    <!--SECTION 7----->
+    <section class="section7">
+        <div class="content">
+            <h1 style="font-weight: bold;">Join a world of learning</h1>
+            <p>Malesuada ut aliquam at ac est nisi, interdum etiam dignissim.<br>
+                Risus elit et fringilla habitant ut facilisi.</p>
+            <button> Sign Up Now</button>
+        </div>
+    </section>
+
+    <!--footer----->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./img/footer/Logo.png" alt="Logo">
+            </div>
+            <div class="footer-column">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <li><a href="#">Accessibility <span
+                                style="background:#fff; color:#000; padding:2px 5px; font-size:10px; border-radius:5px;">BETA</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Solutions</h3>
+                <ul>
+                    <li><a href="#">Brainstorming</a></li>
+                    <li><a href="#">Ideation</a></li>
+                    <li><a href="#">Wireframing</a></li>
+                    <li><a href="#">Research</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tutorials</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Integrations</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Request Demo →</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="margin-top: 20px;">uteach @ 2023. All rights reserved.</p>
+            <div class="footer-bottom-container">
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-icons">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                    <i class="fas fa-euro-sign"></i>
+                    <span>EUR</span>
+                    <i class="fas fa-universal-access"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const testimonialContainer = document.querySelector('.testimonial-container');
+        const leftArrow = document.querySelector('.arrow[alt="Left Arrow"]');
+        const rightArrow = document.querySelector('.arrow[alt="Right Arrow"]');
+
+        let currentIndex = 0;
+
+        rightArrow.addEventListener('click', () => {
+            const testimonialCount = 4; // Total number of testimonials
+            if (currentIndex < testimonialCount - 1) {
+                currentIndex++;
+                testimonialContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+        leftArrow.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                testimonialContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+        });
+
+    </script>
 
 </body>
 
